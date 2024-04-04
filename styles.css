@@ -1,0 +1,123 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --fore-color: #fff;
+}
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-flow {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.summary-result {
+  border-radius: inherit;
+  background: linear-gradient(#bc7fcd, purple);
+}
+
+.result-heading {
+  font-size: 1.5rem;
+  color: var(--fore-color);
+}
+.result {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #49243e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: lightgray;
+}
+
+.result span {
+  font-size: 2.3rem;
+  color: var(--fore-color);
+}
+.grade {
+  font-size: 1.8rem;
+  color: var(--fore-color);
+}
+
+.result-info {
+  width: 25ch;
+  text-align: center;
+  color: #dddddd;
+}
+/* summary */
+.summary-heading,
+.summary-flex,
+.btn {
+  align-self: start;
+}
+
+.summary-heading {
+  font-weight: 400;
+}
+.summary-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.summary-item:nth-child(1) {
+  background-color: #fff2e1;
+  color: #a79277;
+}
+.summary-item:nth-child(2) {
+  background-color: #c6ebc5;
+  color: #a1c398;
+}
+.summary-item:nth-child(3) {
+  background-color: #40679e;
+  color: #1b3c73;
+}
+.summary-item:nth-child(4) {
+  background-color: #e6baa3;
+  color: #d24545;
+}
+.button {
+  width: 200px;
+  padding: 15px 0px;
+  border-radius: 25px;
+  border: none;
+  background-color: #3652ad;
+  color: var(--fore-color);
+  cursor: pointer;
+}
+
+@media all and (max-width: 666px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    max-height: 200px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #fff #8644a2;
+  }
+}
+
